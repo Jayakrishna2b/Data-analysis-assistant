@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Assistant</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <!-- Add theme switcher at the top -->
+    <div class="theme-switcher">
+        <button id="themeToggle" onclick="toggleTheme()">
+            <span class="light-icon">☀️</span>
+            <span class="dark-icon" style="display: none;">🌙</span>
+        </button>
+    </div>
+
+    <div class="main-container">
+        <header>
+            <h1 class="header-title">DATA ANALYSIS ASSISTANT</h1>
+            <div class="upload-section">
+                <div id="dropZone" class="drop-zone">
+                    <div class="upload-icon">📊</div>
+                    <p>Drag and drop file here</p>
+                    <p>Limit 200MB per file • CSV</p>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="fileInput" accept=".csv">
+                        <label for="fileInput" class="upload-btn">Browse files</label>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-section">
+            <div class="content-header">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="showTab('analysis')">Data Analysis</button>
+                    <button class="tab-btn" onclick="showTab('visualization')">Visualization</button>
+                    <button class="tab-btn" onclick="showTab('conclusion')">Data Conclusion</button>
+                    <button class="tab-btn" onclick="showTab('help')">User Guide</button>
+                </div>
+            </div>
+
+            <div class="content-body">
+                <!-- Data Analysis Tab -->
+                <div id="analysisTab" class="tab-content active">
+                    <div class="data-overview">
+                        <h3>Data Overview</h3>
+                        <table id="dataOverview">
+                            <tr>
+                                <th>Total Rows</th>
+                                <th>Total Columns</th>
+                                <th>Numeric Columns</th>
+                                <th>Categorical Columns</th>
+                            </tr>
+                            <tr id="overviewData">
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="data-preview">
+                        <h3>Data Analysis</h3>
+                        <table id="dataPreview"></table>
+                    </div>
+                    
+                    <div class="statistical-summary">
+                        <h3>Statistical Summary</h3>
+                        <table id="statisticalSummary">
+                            <thead>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Mean</th>
+                                    <th>Median</th>
+                                    <th>Min</th>
+                                    <th>Max</th>
+                                    <th>Std Dev</th>
+                                    <th>Missing Values</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Visualization Tab -->
+                <div id="visualizationTab" class="tab-content">
+                    <div class="analysis-controls">
+                        <select id="columnSelect" name="columnSelect">
+                            <option value="">Select Column</option>
+                        </select>
+                        <div class="chart-type-group">
+                            <label>Chart Type:</label>
+                            <select id="chartType" name="chartType">
+                                <option value="bar">Bar Chart</option>
+                                <option value="line">Line Chart</option>
+                                <option value="pie">Pie Chart</option>
+                                <option value="histogram">Histogram</option>
+                                <option value="boxplot">Box Plot</option>
+                                <option value="scatter">Scatter Plot</option>
+                                <option value="heatmap">Heat Map</option>
+                            </select>
+                        </div>
+                        <div class="data-limit-control">
+                            <label for="dataLimit">Show Top:</label>
+                            <select id="dataLimit" name="dataLimit">
+                                <option value="all">All Data</option>
+                                <option value="5">Top 5</option>
+                                <option value="10">Top 10</option>
+                                <option value="20">Top 20</option>
+                                <option value="50">Top 50</option>
+                                <option value="100">Top 100</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                            <input type="number" id="customLimit" min="1" placeholder="Enter number" style="display: none;">
+                        </div>
+                        <button onclick="visualizeData()">Visualize</button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="chartArea"></canvas>
+                    </div>
+                    <div id="scatterControls" class="chart-controls" style="display: none;">
+                        <select id="xAxis" name="xAxis">
+                            <option value="">Select X-Axis</option>
+                        </select>
+                        <select id="yAxis" name="yAxis">
+                            <option value="">Select Y-Axis</option>
+                        </select>
+                    </div>
+                    <div class="export-controls">
+                        <button onclick="exportToExcel()">Export to Excel</button>
+                        <button onclick="saveChart()">Save Chart</button>
+                    </div>
+                </div>
+
+                <!-- Data Conclusion Tab -->
+                <div id="conclusionTab" class="tab-content">
+                    <div class="summary-box">
+                        <h3>Dataset Summary</h3>
+                        <div id="dataSummary"></div>
+                    </div>
+                    <div class="insights-box">
+                        <h3>Key Insights</h3>
+                        <div id="keyInsights"></div>
+                    </div>
+                </div>
+
+                <!-- User Guide Tab -->
+                <div id="helpTab" class="tab-content">
+                    <h3>User Guide</h3>
+                    <p>Welcome to the Data Analysis Assistant! Here's how to use the application:</p>
+                    <ul>
+                        <li><strong>Upload CSV File:</strong> Click on "Choose File" to upload your CSV data.</li>
+                        <li><strong>Data Analysis:</strong> View the data overview, statistical summary, and key insights.</li>
+                        <li><strong>Visualization:</strong> Select columns and chart types to visualize your data.</li>
+                        <li><strong>Export Options:</strong> Export your data to Excel or save visualizations as images.</li>
+                    </ul>
+                    <p>If you have any questions, feel free to reach out!</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/fileHandler.js"></script>
+    <script src="scripts/visualizer.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html> 
