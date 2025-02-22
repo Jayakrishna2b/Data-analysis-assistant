@@ -14,7 +14,7 @@
     <div class="theme-switcher">
         <button id="themeToggle" onclick="toggleTheme()">
             <span class="light-icon">☀️</span>
-            <span class="dark-icon" style="display: none;">🌙</span>
+            <span class="dark-icon " style="display: none;">🌙</span>
         </button>
     </div>
 
@@ -92,12 +92,12 @@
                 <!-- Visualization Tab -->
                 <div id="visualizationTab" class="tab-content">
                     <div class="analysis-controls">
-                        <select id="columnSelect" name="columnSelect">
+                        <select id="columnSelect" name="columnSelect" title="Select Column">
                             <option value="">Select Column</option>
                         </select>
                         <div class="chart-type-group">
-                            <label>Chart Type:</label>
-                            <select id="chartType" name="chartType">
+                            <label>Chart Type :</label>
+                            <select id="chartType" name="chartType" title="Chart Type">
                                 <option value="bar">Bar Chart</option>
                                 <option value="line">Line Chart</option>
                                 <option value="pie">Pie Chart</option>
