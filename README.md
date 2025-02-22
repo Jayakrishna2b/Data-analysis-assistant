@@ -51,6 +51,37 @@ No additional dependencies required. The app runs entirely in the browser.
 ![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/96f9dfb7bffa9380a9aa3ab023eed3a42abfebc3/images/image.png)
 
 
+2. select and upload csv file (darg and drop is also available )
+   
+![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/upload.png)
+
+
+3. Analyzed data
+
+![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/Dataanalysis.png)
+
+
+5. Visualized data
+   
+![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/datavisulization.png)
+
+
+7. Conclusion of csv data file
+
+![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/conclusion.png)
+
+
+6. User guidelines
+   
+![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/user.png)
+
+
+7. Black theme for project ( accessed through top right icon)
+   
+![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/dark.png)
+   
+   
+
 🎥 Demo Video
 
 YOUTUBE LINK : https://youtu.be/r_ckVSmA2Ho
