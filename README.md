@@ -46,8 +46,9 @@ No additional dependencies required. The app runs entirely in the browser.
 
 📸 Screenshots
 
+1. project image
 
-
+![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/96f9dfb7bffa9380a9aa3ab023eed3a42abfebc3/images/image.png)
 
 
 🎥 Demo Video
