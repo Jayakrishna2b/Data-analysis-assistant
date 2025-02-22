@@ -4,6 +4,7 @@ Data Analysis Assistant
 
 Data Analysis Assistant is a web-based tool that allows users to upload CSV files, analyze data, and visualize it using bar graphs, histograms, scatter plots, and more. The tool is designed to work entirely in the browser, ensuring privacy and efficiency without relying on external APIs.
 
+
 🚀 Features
 
 Drag & Drop CSV Upload 📂
@@ -18,6 +19,7 @@ Dark Mode Toggle 🌙☀️
 
 Completely Open Source & FOSS-Compliant 🔓
 
+
 🛠️ Tech Stack
 
 Frontend: HTML, CSS, JavaScript
@@ -26,16 +28,27 @@ Data Parsing: FileReader API, Custom CSV Parser
 
 Visualization: Chart.js
 
+
 📥 Installation & Usage
 
-Clone the Repository
+1.Clone the Repository
 
 git clone https://github.com/Jayakrishna2b/Data-analysis-assistant.git
 cd data-analysis-assistant
 
-Open index.html in a Browser
+2. Open the Repository in vs code
+   
+3.Open index.html file  in vscode 
+
+4.click on Go live 
 
 No additional dependencies required. The app runs entirely in the browser.
+
+📸 Screenshots
+
+
+
+
 
 🎥 Demo Video
 
