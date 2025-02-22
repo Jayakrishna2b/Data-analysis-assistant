@@ -5,6 +5,7 @@ Data Analysis Assistant
 Data Analysis Assistant is a web-based tool that allows users to upload CSV files, analyze data, and visualize it using bar graphs, histograms, scatter plots, and more. The tool is designed to work entirely in the browser, ensuring privacy and efficiency without relying on external APIs.
 
 
+
 🚀 Features
 
 Drag & Drop CSV Upload 📂
@@ -20,6 +21,7 @@ Dark Mode Toggle 🌙☀️
 Completely Open Source & FOSS-Compliant 🔓
 
 
+
 🛠️ Tech Stack
 
 Frontend: HTML, CSS, JavaScript
@@ -27,6 +29,7 @@ Frontend: HTML, CSS, JavaScript
 Data Parsing: FileReader API, Custom CSV Parser
 
 Visualization: Chart.js
+
 
 
 📥 Installation & Usage
@@ -44,36 +47,56 @@ cd data-analysis-assistant
 
 No additional dependencies required. The app runs entirely in the browser.
 
+
+
+🎥 Demo Video
+
+YOUTUBE LINK : https://youtu.be/r_ckVSmA2Ho
+
+
+
 📸 Screenshots
 
 1. project image
+   
 
 ![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/96f9dfb7bffa9380a9aa3ab023eed3a42abfebc3/images/image.png)
 
 
+
 2. select and upload csv file (darg and drop is also available )
+   
    
 ![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/upload.png)
 
 
+
 3. Analyzed data
+   
 
 ![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/Dataanalysis.png)
 
 
+
 5. Visualized data
+
    
 ![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/datavisulization.png)
 
 
+
 7. Conclusion of csv data file
+   
 
 ![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/conclusion.png)
 
 
+
 6. User guidelines
    
+   
 ![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/user.png)
+
 
 
 7. Black theme for project ( accessed through top right icon)
@@ -81,11 +104,6 @@ No additional dependencies required. The app runs entirely in the browser.
 ![image alt](https://github.com/Jayakrishna2b/Data-analysis-assistant/blob/8581949c03d20d02fdb446a420c93991a665ae9f/images/dark.png)
    
    
-
-🎥 Demo Video
-
-YOUTUBE LINK : https://youtu.be/r_ckVSmA2Ho
-
 
 📜 License
 
