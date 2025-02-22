@@ -38,9 +38,9 @@ cd data-analysis-assistant
 
 2. Open the Repository in vs code
    
-3.Open index.html file  in vscode 
+3. Open index.html file  in vscode 
 
-4.click on Go live 
+4. click on Go live 
 
 No additional dependencies required. The app runs entirely in the browser.
 
